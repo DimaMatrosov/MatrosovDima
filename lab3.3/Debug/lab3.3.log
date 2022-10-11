@@ -1,0 +1,5 @@
+﻿  lab3.3.c
+C:\labs\lab3.3\lab3.3.c(8,18): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\labs\lab3.3\lab3.3.c(6,6): warning C4101: k: неиспользованная локальная переменная
+C:\labs\lab3.3\lab3.3.c(6,12): warning C4101: n: неиспользованная локальная переменная
+  lab3.3.vcxproj -> C:\labs\lab3.3\Debug\lab3.3.exe

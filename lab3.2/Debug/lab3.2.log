@@ -1,0 +1,7 @@
+﻿  lab3.2.cpp
+C:\labs\lab3.2\lab3.2.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\labs\lab3.2\lab3.2.cpp(44,24): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+C:\labs\lab3.2\lab3.2.cpp(7,31): warning C4101: sum: неиспользованная локальная переменная
+C:\labs\lab3.2\lab3.2.cpp(6,20): warning C4101: g: неиспользованная локальная переменная
+C:\labs\lab3.2\lab3.2.cpp(7,20): warning C4101: array_max: неиспользованная локальная переменная
+  lab3.2.vcxproj -> C:\labs\lab3.2\Debug\lab3.2.exe
