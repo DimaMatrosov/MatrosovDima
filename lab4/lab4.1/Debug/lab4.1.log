@@ -1,0 +1,6 @@
+﻿  lab4.1.c
+C:\labs\lab4\lab4.1\lab4.1.c(7,18): warning C4244: функция: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\labs\lab4\lab4.1\lab4.1.c(59,13): warning C4013: printMatrix: нет определения; предполагается "extern" с возвратом типа "int"
+C:\labs\lab4\lab4.1\lab4.1.c(6,20): warning C4101: sum: неиспользованная локальная переменная
+C:\labs\lab4\lab4.1\lab4.1.c(6,43): warning C4101: c: неиспользованная локальная переменная
+  lab4.1.vcxproj -> C:\labs\lab4\lab4.1\Debug\lab4.1.exe

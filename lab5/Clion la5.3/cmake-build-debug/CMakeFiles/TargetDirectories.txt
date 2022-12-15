@@ -1,0 +1,3 @@
+C:/labsnew/lab5/Clion la5.3/cmake-build-debug/CMakeFiles/Clion.dir
+C:/labsnew/lab5/Clion la5.3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/labsnew/lab5/Clion la5.3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
