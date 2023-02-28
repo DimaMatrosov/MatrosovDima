@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/labsnew/lab1/cmake-build-debug",
-		"source" : "C:/labsnew/lab1"
+		"build" : "C:/labsnew/labs/lab1/cmake-build-debug",
+		"source" : "C:/labsnew/labs/lab1"
 	},
 	"version" : 
 	{

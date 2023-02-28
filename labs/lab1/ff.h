@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <strings.h>
+#include <string.h>
 typedef enum {
     drama = 0, adventures, detective, comedy, action
 }ctg;
