@@ -1,3 +1,0 @@
-F:\курсы С++\Temp\lab2.3.1\Debug\lab2.3.1.exe
-e:\алгоритмизация\lab2.3.1\Debug\lab2.3.1.exe
-D:\алгоритмизация\lab2.3\Debug\lab2.3.1.exe
