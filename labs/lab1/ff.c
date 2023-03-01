@@ -17,16 +17,16 @@ int str_len(char *str)
 
 void get_str(char **string)
 {
-    int len=0;
+    int len=1;
     *string = (char*) malloc(sizeof(char));
     char c;
     int i = 0;
-    while ((c = getchar()) != EOF && c != '\n')
+    while ((c = (char)getchar()) != EOF && c != '\n')
     {
         *(*string + i) = c;
         i++;
         len++;
-        *string = (char *) realloc(*string, len);
+        *string = (char *) realloc(*string, len+1);
     }
     *(*string + i) = '\0';
 }
@@ -288,7 +288,7 @@ void insertsort_name2(manga* anime, int n){
 
 void delete_struct(manga** anime, int* n, int del){
     int ind = del - 1;
-    free(anime[ind]->name);
+    free((*anime)[ind].name);
     for (int i = ind; i < *n - 1; i++)
     {
         (*anime)[i] = (*anime)[i + 1];
