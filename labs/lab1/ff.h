@@ -12,7 +12,7 @@ typedef struct
     int episode;
 }manga;
 
-int str_len(char *str);
+int str_len(const char *str);
 void qsort_episodes(manga* anime, int left, int right);
 void sort_2_filds(int k,manga* anime);
 void sort_year(int k,manga* anime);
@@ -30,8 +30,8 @@ void menu(manga *anime, int n);
 void free_memory(manga* anime, int n);
 void insertsort_name2(manga* anime, int n);
 void insertsort_name(manga* anime, int n);
-void category_test(char* cat);
+void category_test(const char* cat);
 void delete_struct(manga** anime, int *n, int del);
-void category(char* cat, manga* anime, int i);
+void category(const char* cat, manga* anime, int i);
 void insertsort_ctg(manga* anime, int n);
 void insertsort_ctg2(manga* anime, int n);

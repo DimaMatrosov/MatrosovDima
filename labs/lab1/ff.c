@@ -7,7 +7,7 @@ char* categories[5] =
                  "comedy",
                 "action",
         };
-int str_len(char *str)
+int str_len(const char *str)
 {
     int len = 0;
     while (*(str + len) != '\0')
@@ -40,7 +40,8 @@ void num_element(int* k)
 }
 
 void qsort_episodes(manga* anime, int left, int right) {
-    int i = left, j = right;
+    int i = left;
+    int j = right;
     manga gap = anime[(left + right) / 2];
     do {
         while (anime[i].episode < gap.episode)
@@ -172,8 +173,10 @@ void sort_year2(int k,manga* anime) {
 }
 
 void inputing_anime(manga* anime,int n){
-    int serias,year;
-    char *name, *cat;
+    int serias;
+    int year;
+    char *name;
+    char* cat;
     for (int i = 0; i < n; i++) {
         printf("input name of anime");
         get_str( &name);
@@ -184,7 +187,9 @@ void inputing_anime(manga* anime,int n){
         printf("input category(drama/adventures/detective/comedy/action)\n");
         get_str( &cat);
         category_test(cat);
+        if (str_len(name) != 0)
         anime[i].name = calloc(str_len(name), sizeof(char));
+        else anime[i].name = calloc(1, sizeof(char));
         anime[i].name = name;
         anime[i].episode = serias;
         anime[i].year = year;
@@ -198,7 +203,8 @@ void inputing_anime(manga* anime,int n){
 void menu(manga *anime, int n){
     while (1){
         printf("\nTasks: 1. Num of episodes sort 2. year sort 3. name sort 4. sort by two fields 5.delete struct 6.category sort 0.Stop\n");
-        int task, del;
+        int task;
+        int del;
         input(&task, "Input task:");
         if (!task) {
             break;
@@ -265,12 +271,13 @@ void insertsort_ctg(manga* anime, int n){
 void insertsort_ctg2(manga* anime, int n){
     for(int i=0;i<n; i++){
         int j=i-1;
-        if(anime[i].episode == anime[j].episode || anime[i].year == anime[j].year || anime[i].name== anime[j].name)
-        while(j>=0 &&(strcmp(categories[anime[j].category],categories[anime[j+1].category])>0)){
-            manga temp = anime[j];
-            anime[j] = anime[j+1];
-            anime[j+1]=temp;
-            j--;
+        if(anime[i].episode == anime[j].episode || anime[i].year == anime[j].year || anime[i].name== anime[j].name) {
+            while (j >= 0 && (strcmp(categories[anime[j].category], categories[anime[j + 1].category]) > 0)) {
+                manga temp = anime[j];
+                anime[j] = anime[j + 1];
+                anime[j + 1] = temp;
+                j--;
+            }
         }
     }
 }
@@ -302,7 +309,7 @@ void delete_struct(manga** anime, int* n, int del){
    *anime = (manga*)realloc(*anime, *n * sizeof(manga));
 }
 
-void category(char* cat, manga* anime, int i){
+void category(const char* cat, manga* anime, int i){
 if (strcmp (cat, "drama")==0)
     anime[i].category=drama;
 if (strcmp (cat, "adventures")==0)
@@ -315,7 +322,7 @@ if (strcmp (cat, "action")==0)
     anime[i].category=action;
 }
 
-void category_test(char* cat){
+void category_test(const char* cat){
     if (strcmp (cat, "drama")!=0 && strcmp (cat, "adventures")!=0 && strcmp (cat, "detective")!=0 && strcmp (cat, "comedy")!=0 && strcmp (cat, "action")!=0){
         printf("Wrong input. Restart the program");
         exit(0);
