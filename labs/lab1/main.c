@@ -7,6 +7,5 @@ int main() {
     inputing_anime(anime, n);
     printing(n, anime);
     menu(anime, n);
-    free_memory(anime, n);
     return 0;
 }

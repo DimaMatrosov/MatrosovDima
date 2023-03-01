@@ -192,6 +192,7 @@ void inputing_anime(manga* anime,int n){
         if(i != n-1)
             printf(" next anime\n");
     }
+    free(cat);
 }
 
 void menu(manga *anime, int n){
@@ -227,6 +228,7 @@ void menu(manga *anime, int n){
             printing(n, anime);
         }
     }
+    free_memory(anime, n);
 }
 
 void free_memory(manga* anime, int n) {
@@ -292,6 +294,7 @@ void delete_struct(manga** anime, int* n, int del){
     for (int i = ind; i < *n - 1; i++)
     {
         (*anime)[i] = (*anime)[i + 1];
+
     }
     *n = *n -1;
    *anime = (manga*)realloc(*anime, *n * sizeof(manga));
