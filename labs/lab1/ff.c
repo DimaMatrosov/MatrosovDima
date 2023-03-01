@@ -191,8 +191,8 @@ void inputing_anime(manga* anime,int n){
         category(cat, anime, i);
         if(i != n-1)
             printf(" next anime\n");
+        free(cat);
     }
-    free(cat);
 }
 
 void menu(manga *anime, int n){
@@ -293,8 +293,10 @@ void delete_struct(manga** anime, int* n, int del){
     free((*anime)[ind].name);
     for (int i = ind; i < *n - 1; i++)
     {
-        (*anime)[i] = (*anime)[i + 1];
-
+        (*anime)[i].year = (*anime)[i + 1].year;
+        (*anime)[i].category = (*anime)[i + 1].category;
+        (*anime)[i].name= (*anime)[i + 1].name;
+        (*anime)[i].episode = (*anime)[i + 1].episode;
     }
     *n = *n -1;
    *anime = (manga*)realloc(*anime, *n * sizeof(manga));
