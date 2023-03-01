@@ -179,16 +179,17 @@ void inputing_anime(manga* anime,int n){
     char* cat;
     for (int i = 0; i < n; i++) {
         printf("input name of anime");
-        get_str( &name);
+        get_str(&name);
         printf("input number of episodes");
-        num_element( &serias);
+        num_element(&serias);
         printf("input year of realise");
-        num_element( &year);
+        num_element(&year);
         printf("input category(drama/adventures/detective/comedy/action)\n");
-        get_str( &cat);
+        get_str(&cat);
         category_test(cat);
-        if (str_len(name) != 0)
-        anime[i].name = calloc(str_len(name), sizeof(char));
+        if (str_len(name) != 0){
+            anime[i].name = calloc(str_len(name), sizeof(char));
+        }
         else anime[i].name = calloc(1, sizeof(char));
         anime[i].name = name;
         anime[i].episode = serias;
