@@ -1,4 +1,4 @@
-# MatrosovDima# Лабораторные работы ОАИП
+# MatrosovDima# # Лабораторные работы ОАИП
 
 ## Содержание:
 
@@ -14,12 +14,12 @@
 
 ## Лабораторная 1
 
-**Задача 1 Ввести стороны равностороннего
+**[Задача 1](https://github.com/ShimmeryHirm/labs/blob/master/src/lab1/task1.c)**. Ввести стороны равностороннего
 треугольника. Найти площадь этого треугольника и его высоту. Результат вывести с точностью до трех знаков после
 запятой.\
-**Задача 2. Окружность с центром в точке (x, y)
+**[Задача 2](https://github.com/ShimmeryHirm/labs/blob/master/src/lab1/task2.c)**. Окружность с центром в точке (x, y)
 проходит через точку (x1,y1). Определите, принадлежит ли точка (x2,y2) данной окружности.\
-**Задача 3 Определить, делителем каких целых чисел
+**[Задача 3](https://github.com/ShimmeryHirm/labs/blob/master/src/lab1/task3.c)**. Определить, делителем каких целых чисел
 a, b и c является целое число N.\
 **[Задача 4](https://github.com/ShimmeryHirm/labs/blob/master/src/lab1/task4.c)**. Дан список дисциплин, изучаемых в БГУИР и
 отчетность по ним. Составить программу, которая бы по названию дисциплины выдавала бы отчетность по нему.\
@@ -73,27 +73,29 @@ k-ый элемент\
 
 ## Лабораторная 5
 
-**[Задача 1](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab5/lionlab5.1/main.cpp)**. Заполнить массив с клавиатуры. После
+**[Задача 1](https://github.com/ShimmeryHirm/labs/blob/master/src/lab5/task1.c)**. Заполнить массив с клавиатуры. После
 каждого элемента вставить значение его квадрата.\
-**[Задача 2](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab5/lab5.2/main.cpp)**. В двумерном массиве целых положительных
+**[Задача 2](https://github.com/ShimmeryHirm/labs/blob/master/src/lab5/task2.c)**. В двумерном массиве целых положительных
 чисел удалить все числа после K-го, если количество чисел в строке меньше K - оставить строку без изменений. Количество
 чисел в строке может быть различным, последнее число - -1.\
-**[Задача 3](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab5/Clion la5.3/main.cpp)**. В двумерной матрице размером NxM удалить
+**[Задача 3](https://github.com/ShimmeryHirm/labs/blob/master/src/lab5/task3.c)**. В двумерной матрице размером NxM удалить
 все столбцы содержащие только отрицательные числа
 
 ## Лабораторная 6
 
-**[Задача 1](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab6/lab6.1/main.cpp)**. В одномерном массиве выполнить сортировку
+**[Задача 1](https://github.com/ShimmeryHirm/labs/blob/master/src/lab6/task1.c)**. В одномерном массиве выполнить сортировку
 отрицательных элементов методом выбора\
-**[Задача 2](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab6/lab6.2/main.cpp)**. В матрице размером NxM выполнить
+**[Задача 2](https://github.com/ShimmeryHirm/labs/blob/master/src/lab6/task2.c)**. В матрице размером NxM выполнить
 сортировку строк по убываниюсуммы элементов с четными номерами столбцов методом Шелла.
 
 ## Лабораторная 7
 
-**[Задача 1](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab7,8/lab7.1/main.cpp)**. Дана строка. Найти количество повторений
-введенного слова
+**[Задача 1](https://github.com/ShimmeryHirm/labs/blob/master/src/lab7/main.c)**. Дана строка. Найти количество повторений
+введенного слова \
+**[Задача 2](https://github.com/ShimmeryHirm/labs/blob/master/src/lab6/main.c)**. Даны строки S и S0. Проверить, содержится
+ли строка S0 в строке S. Если содержится, то вывести True, если не содержится, то вывести False.
 
 ## Лабораторная 8
 
-**[Задача 1](https://github.com/DimaMatrosov/MatrosovDima/1 sem/lab7,8/lab8/main.c)**. Отсортировать методом вставок массив
+**[Задача 1](https://github.com/ShimmeryHirm/labs/blob/master/src/lab8/main.c)**. Отсортировать методом вставок массив
 строк по убыванию длины максимального слова в каждой строки
