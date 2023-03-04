@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\labsnew\lab7\lab7.1 Select CMakeLists.txt

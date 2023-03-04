@@ -1,3 +1,0 @@
-C:/labsnew/lab8test/cmake-build-debug/CMakeFiles/lab8.dir
-C:/labsnew/lab8test/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/labsnew/lab8test/cmake-build-debug/CMakeFiles/rebuild_cache.dir

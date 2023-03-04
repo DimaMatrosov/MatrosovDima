@@ -1,3 +1,0 @@
-C:/labsnew/ekz/b20/ex1/cmake-build-debug/CMakeFiles/ex1.dir
-C:/labsnew/ekz/b20/ex1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/labsnew/ekz/b20/ex1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
