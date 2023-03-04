@@ -73,12 +73,12 @@ k-ый элемент\
 
 ## Лабораторная 5
 
-**[Задача 1](https://github.com/ShimmeryHirm/labs/blob/master/src/lab5/task1.c)**. Заполнить массив с клавиатуры. После
+**[Задача 1](https://github.com/DimaMatrosov/MatrosovDima/blob/main/1%20sem/lab5/lionlab5.1/main.cpp)**. Заполнить массив с клавиатуры. После
 каждого элемента вставить значение его квадрата.\
-**[Задача 2](https://github.com/ShimmeryHirm/labs/blob/master/src/lab5/task2.c)**. В двумерном массиве целых положительных
+**[Задача 2](https://github.com/DimaMatrosov/MatrosovDima/blob/main/1%20sem/lab5/lab5.2/main.cpp)**. В двумерном массиве целых положительных
 чисел удалить все числа после K-го, если количество чисел в строке меньше K - оставить строку без изменений. Количество
 чисел в строке может быть различным, последнее число - -1.\
-**[Задача 3](https://github.com/ShimmeryHirm/labs/blob/master/src/lab5/task3.c)**. В двумерной матрице размером NxM удалить
+**[Задача 3](github.com/DimaMatrosov/MatrosovDima/blob/main/1%20sem/lab5/Clion%20la5.3/main.cpp)**. В двумерной матрице размером NxM удалить
 все столбцы содержащие только отрицательные числа
 
 ## Лабораторная 6
