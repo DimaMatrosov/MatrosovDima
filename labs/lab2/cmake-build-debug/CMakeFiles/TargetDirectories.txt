@@ -1,4 +1,0 @@
-C:/labsnew/labs/lab2/cmake-build-debug/CMakeFiles/compress.dir
-C:/labsnew/labs/lab2/cmake-build-debug/CMakeFiles/decompress.dir
-C:/labsnew/labs/lab2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/labsnew/labs/lab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
