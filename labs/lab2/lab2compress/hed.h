@@ -39,10 +39,8 @@ int count_profit(Node *a, Node *b);
 
 void mark_used(Node *head, char *word);
 
-void replace_words(Node *head, string *split_text, char *file);
+void replace_words(Node *head, string *split_text, char f1[]);
 
 void count_repeats(string *split_text, Node **head);
 
-void compress(char file[], char f[], char f1[]);
-
-void decompress(char file[]);
+void compress(char file[], char comp[], char f1[]);

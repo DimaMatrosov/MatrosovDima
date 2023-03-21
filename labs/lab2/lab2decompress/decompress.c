@@ -1,24 +1,20 @@
 #include "hed.h"
 
-void decompress(char file[], char f[], char f1[]) {
-    char *text = file_read(f);
+void decompress(char comp[], char decomp[], char data[]) {
+    char *text = file_read(comp);
     if (text == NULL)
         exit(0);
     string *compressed_text = split(text, " ");
 
-    FILE *fp = fopen(f, "rb");
+    FILE *fp = fopen(comp, "rb");
     fseek(fp, 0, SEEK_END);
     int size = ftell(fp);
     printf("Size: %d\n", size);
-
-    char *data_name = calloc(strlen(file) + 10, sizeof(char));
-    strcat(strcat(data_name, file), ".data");
-    text = file_read(data_name);
+    text = file_read(data);
     if (text == NULL)
         exit(0);
     string *compressed_data = split(text, "\n");
-
-    fp = fopen(data_name, "rb");
+    fp = fopen(data, "rb");
     fseek(fp, 0, SEEK_END);
     int data_size = ftell(fp);
     printf("Data size: %d\n", data_size);
@@ -26,19 +22,15 @@ void decompress(char file[], char f[], char f1[]) {
 
     for (int i = 0; i < compressed_data->len; i++) {
         string *words = split(compressed_data->str[i], " ");
-        if (words->len != 2) continue;
+        if (words->len != 2)
+            continue;
+
         swap_words(compressed_text, words->str[0], words->str[1]);
     }
-
-    char *decompressed_name = calloc(strlen(file) + 10, sizeof(char));
-    strcat(strcat(decompressed_name, file), ".decompressed");
-
-    fclose(fopen(f1, "w"));
-
-    fp = fopen(f1, "ab");
+    fclose(fopen(decomp, "w"));
+    fp = fopen(decomp, "ab");
     if (fp == NULL)
         exit(0);
-
     for (int i = 0; i < compressed_text->len; i++) {
         fputs(compressed_text->str[i], fp);
         if (i != compressed_text->len - 1) fputs(" ", fp);
@@ -46,7 +38,6 @@ void decompress(char file[], char f[], char f1[]) {
     fseek(fp, 0, SEEK_END);
     size = ftell(fp);
     fclose(fp);
-
     printf("New size: %d\n", size);
     printf("File decompressed!\n");
 }

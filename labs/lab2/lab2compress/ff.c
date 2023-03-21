@@ -19,13 +19,8 @@ char *file_read(char path[]) {
     return buffer;
 }
 
-void replace_words(Node *head, string *split_text, char *file) {
+void replace_words(Node *head, string *split_text, char f1[]) {
     Node *a = head;
-
-    char *data_name = calloc(strlen(file) + 10, sizeof(char));
-    strcat(strcat(data_name, file), ".data");
-    fclose(fopen(data_name, "w"));
-
     while (a) {
         int max = 0;
         char *word;
@@ -38,16 +33,15 @@ void replace_words(Node *head, string *split_text, char *file) {
             }
             b = b->next;
         }
-
         if (max > 0) {
             mark_used(head, a->word);
             mark_used(head, word);
 
             if (strlen(word) == 0 || strlen(a->word) == 0) continue;
             swap_words(split_text, a->word, word);
-            FILE *fp = fopen(data_name, "ab");
-            if (fp == NULL) exit(0);
-
+            FILE *fp = fopen(f1, "ab");
+            if (fp == NULL)
+                exit(0);
             fputs(a->word, fp);
             fputs(" ", fp);
             fputs(word, fp);
@@ -103,7 +97,6 @@ string *split(char *input, char *delimiter) {
     while (token != NULL) {
         str->str = realloc(str->str, (str->len + 1) * sizeof(char *));
         str->str[str->len++] = token;
-
         token = multi_tok(NULL, delimiter);
     }
     return str;
@@ -174,10 +167,8 @@ void split_linked_list(Node *src, Node **low, Node **high) {
         (*high) = NULL;
         return;
     }
-
     slow = src;
     fast = src->next;
-
     while (fast != NULL) {
         fast = fast->next;
         if (fast != NULL) {
@@ -185,7 +176,6 @@ void split_linked_list(Node *src, Node **low, Node **high) {
             slow = slow->next;
         }
     }
-
     (*low) = src;
     (*high) = slow->next;
     slow->next = NULL;
@@ -209,7 +199,6 @@ int count_profit(Node *a, Node *b) {
     else
         return (a->count * a->len + b->count * b->len) - (a->count * b->len + b->count * a->len) -
                (b->len + a->len + 2);
-
 }
 
 void mark_used(Node *head, char *word) {

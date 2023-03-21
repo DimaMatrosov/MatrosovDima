@@ -10,14 +10,10 @@ typedef struct Node {
     struct Node *next;
 } Node;
 
-Node *getLast(Node *head);
-
 typedef struct {
     int len;
     char **str;
 } string;
-
-void pushBack(Node **head, char *word, int count);
 
 void merge(Node *a, Node *b, Node **c);
 
@@ -33,16 +29,4 @@ char *multi_tok(char *input, char *delimiter);
 
 char *file_read(char path[]);
 
-int check(Node *head, char *word);
-
-int count_profit(Node *a, Node *b);
-
-void mark_used(Node *head, char *word);
-
-void replace_words(Node *head, string *split_text, char *file);
-
-void count_repeats(string *split_text, Node **head);
-
-void compress(char file[]);
-
-void decompress(char file[], char f[], char f1[]);
+void decompress( char comp[], char decomp[], char data[]);
