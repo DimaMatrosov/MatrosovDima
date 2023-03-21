@@ -46,52 +46,6 @@ string *split(char *input, char *delimiter) {
     return str;
 }
 
-void merge(Node *a, Node *b, Node **c) {
-    Node tmp;
-    *c = NULL;
-    if (a == NULL) {
-        *c = b;
-        return;
-    }
-    if (b == NULL) {
-        *c = a;
-        return;
-    }
-    if (a->count * a->len > b->count * b->len) {
-        *c = a;
-        a = a->next;
-    } else {
-        *c = b;
-        b = b->next;
-    }
-    tmp.next = *c;
-    while (a && b) {
-        if (a->count * a->len > b->count * b->len) {
-            (*c)->next = a;
-            a = a->next;
-        } else {
-            (*c)->next = b;
-            b = b->next;
-        }
-        (*c) = (*c)->next;
-    }
-    if (a) {
-        while (a) {
-            (*c)->next = a;
-            (*c) = (*c)->next;
-            a = a->next;
-        }
-    }
-    if (b) {
-        while (b) {
-            (*c)->next = b;
-            (*c) = (*c)->next;
-            b = b->next;
-        }
-    }
-    *c = tmp.next;
-}
-
 void split_linked_list(Node *src, Node **low, Node **high) {
     Node *fast = NULL;
     Node *slow = NULL;
@@ -116,18 +70,6 @@ void split_linked_list(Node *src, Node **low, Node **high) {
     (*low) = src;
     (*high) = slow->next;
     slow->next = NULL;
-}
-
-void mergeSort(Node **head) {
-    Node *low = NULL;
-    Node *high = NULL;
-    if ((*head == NULL) || ((*head)->next == NULL)) {
-        return;
-    }
-    split_linked_list(*head, &low, &high);
-    mergeSort(&low);
-    mergeSort(&high);
-    merge(low, high, head);
 }
 
 char *multi_tok(char *input, char *delimiter) {

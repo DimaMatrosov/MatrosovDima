@@ -15,11 +15,7 @@ typedef struct {
     char **str;
 } string;
 
-void merge(Node *a, Node *b, Node **c);
-
 void split_linked_list(Node *src, Node **low, Node **high);
-
-void mergeSort(Node **head);
 
 string *split(char *input, char *delimiter);
 
