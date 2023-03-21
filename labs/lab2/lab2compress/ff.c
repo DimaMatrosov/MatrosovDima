@@ -1,25 +1,25 @@
 #include "hed.h"
 
-char *file_read(char path[]) {
+char *file_read(char file[]) {
 
-    long length;
-    FILE *f = fopen(path, "rb");
+    long len;
+    FILE *fl = fopen(file, "rb");
 
-    if (f == NULL)
+    if (fl == NULL)
         return NULL;
 
-    fseek(f, 0, SEEK_END);
-    length = ftell(f);
-    fseek(f, 0, SEEK_SET);
-    char *buffer = calloc(length, 1);
+    fseek(fl, 0, SEEK_END);
+    len = ftell(fl);
+    fseek(fl, 0, SEEK_SET);
+    char *buffer = calloc(len, 1);
 
-    fread(buffer, 1, length, f);
-    fclose(f);
+    fread(buffer, 1, len, fl);
+    fclose(fl);
 
     return buffer;
 }
 
-void replace_words(Node *head, string *split_text, char f1[]) {
+void replace_words(Node *head, str *split_text, char data[]) {
     Node *a = head;
     while (a) {
         int max = 0;
@@ -39,7 +39,7 @@ void replace_words(Node *head, string *split_text, char f1[]) {
 
             if (strlen(word) == 0 || strlen(a->word) == 0) continue;
             swap_words(split_text, a->word, word);
-            FILE *fp = fopen(f1, "ab");
+            FILE *fp = fopen(data, "ab");
             if (fp == NULL)
                 exit(0);
             fputs(a->word, fp);
@@ -61,7 +61,7 @@ int check(Node *head, char *word) {
     return 0;
 }
 
-void swap_words(string *text, char *word1, char *word2) {
+void swap_words(str *text, char *word1, char *word2) {
     for (int i = 0; i < text->len; i++) {
         if (strcmp(text->str[i], word1) == 0) {
             text->str[i] = word2;
@@ -71,7 +71,7 @@ void swap_words(string *text, char *word1, char *word2) {
     }
 }
 
-void pushBack(Node **head, char *word, int count) {
+void push_back(Node **head, char *word, int count) {
     Node *last = getLast(*head);
     Node *tmp = (Node *) malloc(sizeof(Node));
     tmp->word = word;
@@ -86,9 +86,9 @@ void pushBack(Node **head, char *word, int count) {
     last->next = tmp;
 }
 
-string *split(char *input, char *delimiter) {
+str *split(char *input, char *delimiter) {
 
-    string *str = malloc(sizeof(string));
+    str *str = malloc(sizeof(str));
     str->str = NULL;
     str->len = 0;
 
@@ -181,15 +181,15 @@ void split_linked_list(Node *src, Node **low, Node **high) {
     slow->next = NULL;
 }
 
-void mergeSort(Node **head) {
+void merge_sort(Node **head) {
     Node *low = NULL;
     Node *high = NULL;
     if ((*head == NULL) || ((*head)->next == NULL)) {
         return;
     }
     split_linked_list(*head, &low, &high);
-    mergeSort(&low);
-    mergeSort(&high);
+    merge_sort(&low);
+    merge_sort(&high);
     merge(low, high, head);
 }
 
@@ -211,7 +211,7 @@ void mark_used(Node *head, char *word) {
     }
 }
 
-void count_repeats(string *split_text, Node **head) {
+void count_repeats(str *split_text, Node **head) {
 
     for (int i = 0; i < split_text->len; i++) {
 
@@ -225,9 +225,9 @@ void count_repeats(string *split_text, Node **head) {
                 cnt++;
             }
         }
-        pushBack(&(*head), split_text->str[i], cnt);
+        push_back(&(*head), split_text->str[i], cnt);
     }
-    mergeSort(&(*head));
+    merge_sort(&(*head));
 }
 
 char *multi_tok(char *input, char *delimiter) {

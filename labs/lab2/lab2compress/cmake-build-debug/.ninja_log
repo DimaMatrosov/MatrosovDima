@@ -18,3 +18,7 @@
 135	260	7011179016030811	lab2compress.exe	a5497e456c118a36
 2	123	7011180237400070	CMakeFiles/lab2compress.dir/compress.c.obj	2bf30502c7bb6c5b
 124	256	7011180238667223	lab2compress.exe	a5497e456c118a36
+11	152	7011214879913394	CMakeFiles/lab2compress.dir/compress.c.obj	2bf30502c7bb6c5b
+3	153	7011214879913394	CMakeFiles/lab2compress.dir/main.c.obj	7115099cbc873cf6
+20	184	7011214880228880	CMakeFiles/lab2compress.dir/ff.c.obj	e3358301d961afde
+184	330	7011214881634953	lab2compress.exe	a5497e456c118a36

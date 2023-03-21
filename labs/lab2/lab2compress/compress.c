@@ -1,6 +1,6 @@
 #include "hed.h"
 
-void compress(char file[], char comp[],char f1[]) {
+void compress(char file[], char comp[],char data[]) {
 
     char *text = file_read(file);
     if (text == NULL)
@@ -11,12 +11,12 @@ void compress(char file[], char comp[],char f1[]) {
     int size = ftell(fp);
     printf("Size: %d\n", size);
 
-    string *split_text = split(text, " ");
+    str *split_text = split(text, " ");
 
     Node *head = NULL;
     count_repeats(split_text, &head);
-    fclose(fopen(f1, "w"));
-    replace_words(head, split_text, f1);
+    fclose(fopen(data, "w"));
+    replace_words(head, split_text, data);
 
     fclose(fopen(comp, "w"));
     fp = fopen(comp, "ab");
@@ -31,7 +31,7 @@ void compress(char file[], char comp[],char f1[]) {
     size = ftell(fp);
     printf("New size: %d\n", size);
     fclose(fp);
-    fp = fopen(f1, "rb");
+    fp = fopen(data, "rb");
     fseek(fp, 0, SEEK_END);
     int data_size = ftell(fp);
     fclose(fp);

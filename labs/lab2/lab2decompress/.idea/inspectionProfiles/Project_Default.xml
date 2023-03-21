@@ -1,7 +1,7 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="ArgumentSelectionDefects" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO">
+    <inspection_tool class="ArgumentSelectionDefects" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO">
       <option name="clangTidyCheckOptions">
         <list>
           <ClangTidyCheckOption>
@@ -11,33 +11,33 @@
         </list>
       </option>
     </inspection_tool>
-    <inspection_tool class="ArrayIndexOutOfBounds" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="ClangTidy" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="ClangdErrorsAndWarnings" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="Clazy" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="ConstantConditionsOC" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="ConstantFunctionResult" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="ConstantParameter" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="DanglingPointer" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="EmptyDeclOrStmt" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="EndlessLoop" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="HidingNonVirtualFunction" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="InfiniteRecursion" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="LocalValueEscapesScope" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="LoopDoesntUseConditionVariable" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
+    <inspection_tool class="ArrayIndexOutOfBounds" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="ClangTidy" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="ClangdErrorsAndWarnings" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="Clazy" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="ConstantConditionsOC" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="ConstantFunctionResult" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="ConstantParameter" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="DanglingPointer" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="EmptyDeclOrStmt" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="EndlessLoop" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="HidingNonVirtualFunction" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="InfiniteRecursion" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="LocalValueEscapesScope" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="LoopDoesntUseConditionVariable" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
     <inspection_tool class="Misra" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
-    <inspection_tool class="NotImplementedFunctions" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="NullDereference" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
+    <inspection_tool class="NotImplementedFunctions" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="NullDereference" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
     <inspection_tool class="OCInconsistentNaming" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedConcept" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedGlobalDeclaration" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedIncludeDirective" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedMacro" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedStruct" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedTemplateParameter" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="OCUnusedTypeAlias" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="PreprocessorComment" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="Simplify" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO">
+    <inspection_tool class="OCUnusedConcept" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="OCUnusedGlobalDeclaration" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="OCUnusedIncludeDirective" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="OCUnusedMacro" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="OCUnusedStruct" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="OCUnusedTemplateParameter" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="OCUnusedTypeAlias" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="PreprocessorComment" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="Simplify" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO">
       <option name="clangTidyCheckOptions">
         <list>
           <ClangTidyCheckOption>
@@ -64,12 +64,12 @@
       <option name="processLiterals" value="true" />
       <option name="processComments" value="true" />
     </inspection_tool>
-    <inspection_tool class="UnconstrainedVariableType" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="UnreachableCallsOfFunction" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="UnreachableCode" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="UnusedLocalVariable" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="UnusedParameter" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
-    <inspection_tool class="UnusedValue" enabled="true" level="TYPO" enabled_by_default="true" editorAttributes="TYPO" />
+    <inspection_tool class="UnconstrainedVariableType" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="UnreachableCallsOfFunction" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="UnreachableCode" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="UnusedLocalVariable" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="UnusedParameter" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
+    <inspection_tool class="UnusedValue" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
     <inspection_tool class="VirtualCallInCtorOrDtor" enabled="false" level="TYPO" enabled_by_default="false" editorAttributes="TYPO" />
   </profile>
 </component>

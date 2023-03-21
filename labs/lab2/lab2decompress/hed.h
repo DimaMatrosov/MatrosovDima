@@ -27,6 +27,6 @@ void swap_words(string *text, char *word1, char *word2);
 
 char *multi_tok(char *input, char *delimiter);
 
-char *file_read(char path[]);
+char *file_read(char file[]);
 
 void decompress( char comp[], char decomp[], char data[]);

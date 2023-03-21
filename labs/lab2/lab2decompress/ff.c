@@ -1,9 +1,9 @@
 #include "hed.h"
 
-char *file_read(char path[]) {
+char *file_read(char file[]) {
 
     long length;
-    FILE *f = fopen(path, "rb");
+    FILE *f = fopen(file, "rb");
 
     if (f == NULL)
         return NULL;

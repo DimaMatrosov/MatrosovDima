@@ -15,19 +15,19 @@ Node *getLast(Node *head);
 typedef struct {
     int len;
     char **str;
-} string;
+} str;
 
-void pushBack(Node **head, char *word, int count);
+void push_back(Node **head, char *word, int count);
 
 void merge(Node *a, Node *b, Node **c);
 
 void split_linked_list(Node *src, Node **low, Node **high);
 
-void mergeSort(Node **head);
+void merge_sort(Node **head);
 
-string *split(char *input, char *delimiter);
+str *split(char *input, char *delimiter);
 
-void swap_words(string *text, char *word1, char *word2);
+void swap_words(str *text, char *word1, char *word2);
 
 char *multi_tok(char *input, char *delimiter);
 
@@ -39,8 +39,8 @@ int count_profit(Node *a, Node *b);
 
 void mark_used(Node *head, char *word);
 
-void replace_words(Node *head, string *split_text, char f1[]);
+void replace_words(Node *head, str *split_text, char data[]);
 
-void count_repeats(string *split_text, Node **head);
+void count_repeats(str *split_text, Node **head);
 
-void compress(char file[], char comp[], char f1[]);
+void compress(char file[], char comp[], char data[]);
