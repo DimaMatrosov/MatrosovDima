@@ -194,8 +194,10 @@ void merge_sort(Node **head) {
 }
 
 int count_profit(Node *a, Node *b) {
-    if (a->count <= b->count) return -0;
-    else if (a->used || b->used) return -1;
+    if (a->count <= b->count)
+        return -0;
+    else if (a->used || b->used)
+        return -1;
     else
         return (a->count * a->len + b->count * b->len) - (a->count * b->len + b->count * a->len) -
                (b->len + a->len + 2);

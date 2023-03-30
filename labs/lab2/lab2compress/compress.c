@@ -9,10 +9,9 @@ void compress(char file[], char comp[],char data[]) {
     FILE *fp = fopen(file, "rb");
     fseek(fp, 0 , SEEK_END);
     int size = ftell(fp);
-    printf("Size: %d\n", size);
-
+    printf("File size: %d\n", size);
+    fclose(fp);
     str *split_text = split(text, " ");
-
     Node *head = NULL;
     count_repeats(split_text, &head);
     fclose(fopen(data, "w"));
@@ -29,7 +28,7 @@ void compress(char file[], char comp[],char data[]) {
     }
     fseek(fp, 0, SEEK_END);
     size = ftell(fp);
-    printf("New size: %d\n", size);
+    printf("Compressed size: %d\n", size);
     fclose(fp);
     fp = fopen(data, "rb");
     fseek(fp, 0, SEEK_END);

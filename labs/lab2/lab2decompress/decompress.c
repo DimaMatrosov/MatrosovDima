@@ -9,14 +9,16 @@ void decompress(char comp[], char decomp[], char data[]) {
     FILE *fp = fopen(comp, "rb");
     fseek(fp, 0, SEEK_END);
     int size = ftell(fp);
-    printf("Size: %d\n", size);
+    printf("File size: %d\n", size);
     text = file_read(data);
     if (text == NULL)
         exit(0);
     string *compressed_data = split(text, "\n");
+    fclose(fp);
     fp = fopen(data, "rb");
     fseek(fp, 0, SEEK_END);
     int data_size = ftell(fp);
+    fclose(fp);
     printf("Data size: %d\n", data_size);
     printf("Total size: %d\n", size + data_size);
 

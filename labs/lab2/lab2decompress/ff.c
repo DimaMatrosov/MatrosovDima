@@ -46,32 +46,6 @@ string *split(char *input, char *delimiter) {
     return str;
 }
 
-void split_linked_list(Node *src, Node **low, Node **high) {
-    Node *fast = NULL;
-    Node *slow = NULL;
-
-    if (src == NULL || src->next == NULL) {
-        (*low) = src;
-        (*high) = NULL;
-        return;
-    }
-
-    slow = src;
-    fast = src->next;
-
-    while (fast != NULL) {
-        fast = fast->next;
-        if (fast != NULL) {
-            fast = fast->next;
-            slow = slow->next;
-        }
-    }
-
-    (*low) = src;
-    (*high) = slow->next;
-    slow->next = NULL;
-}
-
 char *multi_tok(char *input, char *delimiter) {
     static char *string;
     if (input != NULL)
