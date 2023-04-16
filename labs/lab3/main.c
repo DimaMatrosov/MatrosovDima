@@ -1,12 +1,16 @@
 #include "hed.h"
+#define _CRT_SECURE_NO_WARNINGS
 int main() {
     char fileName[100];
     BMPHeader header;
     BMPInfoHeader infoHeader;
     printf("file name:");
-    scanf("%s", fileName);
+    scanf_s("%s", fileName);
     FILE* BMP = fopen(fileName, "rb");
-    ifFile(BMP);
+    if (!BMP) {
+        printf("Wrong open\n");
+        exit(1);
+    }
     fread(&header.type, sizeof(header.type), 1, BMP);
     fread(&header.size, sizeof(header.size), 1, BMP);
     fread(&header.reserved1, sizeof(header.reserved1), 1, BMP);

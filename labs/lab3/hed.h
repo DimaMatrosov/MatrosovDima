@@ -28,5 +28,5 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
 void check(BMPHeader header,BMPInfoHeader infoHeader);
 void BmpToGrayBlack(unsigned char *imageData, int imageSize);
 void BmpToNegative(unsigned char *imageData, int imageSize);
-void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, unsigned char *imageData, int imageSize);
-void ifFile(FILE* BMP);
+void WriteInBMP(BMPHeader header, BMPInfoHeader infoHeader, FILE* BMP, const unsigned char *imageData, int imageSize);
+void ifFile(const FILE* BMP);
