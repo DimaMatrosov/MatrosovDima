@@ -21,7 +21,7 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             memcpy(negativeImageData, imageData, sizeof(unsigned char) * imageSize);
             BmpToNegative(negativeImageData, imageSize);
             char outFilename[100] = "negative.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP, outFilename, "wb");
             if (!BMP) {
                 printf("Wrong open\n");
                 exit(1);
@@ -36,7 +36,7 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             memcpy(grayImageData, imageData, sizeof(unsigned char) * imageSize);
             BmpToGrayBlack(grayImageData, imageSize);
             char outFilename[100] = "blackGray.bmp";
-            BMP = fopen(outFilename, "wb");
+            fopen_s(&BMP, outFilename, "wb");
              if (!BMP) {
                  printf("Wrong open\n");
                  exit(1);

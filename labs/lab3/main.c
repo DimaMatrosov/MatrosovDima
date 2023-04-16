@@ -6,7 +6,8 @@ int main() {
     BMPInfoHeader infoHeader;
     printf("file name:");
     scanf_s("%s", fileName);
-    FILE* BMP = fopen(fileName, "rb");
+    FILE* BMP;
+    fopen_s(&BMP, fileName, "rb");
     if (!BMP) {
         printf("Wrong open\n");
         exit(1);
