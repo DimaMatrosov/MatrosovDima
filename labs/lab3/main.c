@@ -1,5 +1,5 @@
 #include "hed.h"
-#define _CRT_SECURE_NO_WARNINGS
+
 int main() {
     char fileName[100];
     BMPHeader header;

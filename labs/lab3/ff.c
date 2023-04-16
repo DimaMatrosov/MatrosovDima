@@ -1,5 +1,5 @@
 #include "hed.h"
-#define _CRT_SECURE_NO_WARNINGS
+
 
 void check(BMPHeader header,BMPInfoHeader infoHeader) {
     if (header.type[0] != 'B' || header.type[1] != 'M') {
@@ -22,6 +22,10 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             BmpToNegative(negativeImageData, imageSize);
             char outFilename[100] = "negative.bmp";
             BMP = fopen(outFilename, "wb");
+            if (!BMP) {
+                printf("Wrong open\n");
+                exit(1);
+            }
             WriteInBMP(header, infoHeader, BMP, negativeImageData, imageSize);
             printf("Image saved as %s\n", outFilename);
             free(negativeImageData);
@@ -33,6 +37,10 @@ void menu(unsigned char* imageData,int imageSize, FILE* BMP, BMPInfoHeader infoH
             BmpToGrayBlack(grayImageData, imageSize);
             char outFilename[100] = "blackGray.bmp";
             BMP = fopen(outFilename, "wb");
+             if (!BMP) {
+                 printf("Wrong open\n");
+                 exit(1);
+             }
             WriteInBMP(header, infoHeader, BMP, grayImageData, imageSize);
             printf("Image saved as %s\n", outFilename);
             free(grayImageData);
