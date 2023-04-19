@@ -20,11 +20,11 @@ typedef struct {
     unsigned short bitsPerPixel;
     unsigned int compression;
     unsigned int imageSize;
-    int xPixelsPerMeter;//по горизонтали
-    int yPixelsPerMeter;//по вертикали
+    int xPixelsPerMeter;
+    int yPixelsPerMeter;
     unsigned int colorsUsed;
     unsigned int importantColors;
-} InfoHeader;//unsigned char gray = (imageData[i] + imageData[i + 1] + imageData[i + 2]) / 3;
+} InfoHeader;
 
 void menu(unsigned char* imageData,int imageSize, FILE* BMP, InfoHeader infoHeader, Header header);
 void check(Header header, InfoHeader infoHeader);
@@ -33,5 +33,5 @@ void Negative(unsigned char *imageData, int imageSize);
 void WriteIn(Header header, InfoHeader infoHeader, FILE* BMP, const unsigned char *imageData, int imageSize);
 void gammaParam(double* gamma, char* string, double low, double high);
 void gammaCorrection(unsigned char* imageData, int imageSize, double gamma);
-void medianFilter(unsigned char *imageData, InfoHeader *infoHeader);
+void medianFilter(unsigned char *imageData, const InfoHeader *infoHeader);
 void cycles(int x, int y, const InfoHeader* infoHeader, unsigned char* imageData, const unsigned char* buffer);

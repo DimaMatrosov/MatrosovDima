@@ -118,7 +118,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
     }
 }
 
-void medianFilter(unsigned char *imageData, InfoHeader* infoHeader) {
+void medianFilter(unsigned char *imageData, const InfoHeader* infoHeader) {
 
     int width = infoHeader->width;
     int height = infoHeader->height;
