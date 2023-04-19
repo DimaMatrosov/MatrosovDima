@@ -24,7 +24,7 @@ typedef struct {
     int yPixelsPerMeter;//по вертикали
     unsigned int colorsUsed;
     unsigned int importantColors;
-} InfoHeader;
+} InfoHeader;//unsigned char gray = (imageData[i] + imageData[i + 1] + imageData[i + 2]) / 3;
 
 void menu(unsigned char* imageData,int imageSize, FILE* BMP, InfoHeader infoHeader, Header header);
 void check(Header header, InfoHeader infoHeader);

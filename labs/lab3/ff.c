@@ -101,7 +101,6 @@ void Negative(unsigned char *imageData, int imageSize) {
 
 void GrayBlack(unsigned char *imageData, int imageSize) {
     for (int i = 0; i < imageSize; i += 3) {
-        //unsigned char gray = (imageData[i] + imageData[i + 1] + imageData[i + 2]) / 3;
         unsigned char gray = (unsigned char) ((float) imageData[i] * 0.3 + (float) imageData[i + 1] * 0.5 + (float) imageData[i + 2] * 0.1);
         imageData[i] = gray;//r
         imageData[i + 1] = gray;//g
@@ -119,7 +118,7 @@ void gammaParam(double* gamma, char* string, double low, double high){
     }
 }
 
-void medianFilter(unsigned char *imageData, InfoHeader *infoHeader) {
+void medianFilter(unsigned char *imageData, InfoHeader* infoHeader) {
 
     int width = infoHeader->width;
     int height = infoHeader->height;
