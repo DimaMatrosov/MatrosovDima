@@ -1,9 +1,10 @@
 #include "hed.h"
 
 int main() {
-    char fileName[100];
-    BMPHeader header;
-    BMPInfoHeader infoHeader;
+
+    char fileName[MAGIC];
+    Header header;
+    InfoHeader infoHeader;
     printf("file name:");
     scanf_s("%s", fileName);
     FILE* BMP;
@@ -17,7 +18,7 @@ int main() {
     fread(&header.reserved1, sizeof(header.reserved1), 1, BMP);
     fread(&header.reserved2, sizeof(header.reserved2), 1, BMP);
     fread(&header.offset, sizeof(header.offset), 1, BMP);
-    fread(&infoHeader, sizeof(BMPInfoHeader), 1, BMP);
+    fread(&infoHeader, sizeof(InfoHeader), 1, BMP);
     check(header,infoHeader);
 
     int rowSize = ((infoHeader.width * infoHeader.bitsPerPixel + 31) / 32) * 4;
