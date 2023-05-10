@@ -2,13 +2,21 @@
 
 int main(){
     printf("Choose a Naruto character\n");
-    FILE *fp = fopen("tree.txt", "r");
-
+    FILE *fp;
+    fopen_s(&fp, "tree.txt", "r");
+    if (!fp) {
+        printf("Wrong open\n");
+        exit(1);
+    }
     TREE* tree = readTree(fp);
     fclose(fp);
 
     movingTree(tree);
-    fp = fopen("tree.txt", "w");
+    fopen_s(&fp, "tree.txt", "w");
+    if (!fp) {
+        printf("Wrong open\n");
+        exit(1);
+    }
     saveTree(tree, fp);
     fclose(fp);
     freeTree(tree);

@@ -23,7 +23,7 @@ TREE *readTree(FILE *fp) {
 void movingTree(TREE *tree) {
     printf("%s", tree->data);
     char s1;
-    scanf("%c", &s1);
+    scanf_s("%c", &s1);
     rewind(stdin);
     if (s1 == 'y') {
         if (tree->yes == NULL) {
@@ -46,13 +46,14 @@ void movingTree(TREE *tree) {
     movingTree(tree);
 }
 
-TREE *addTree(char *data) {
+TREE *addTree(const char *data) {
     char object[255];
     printf("Who is that?");
-    gets(object);
+    scanf_s("%s",object);
     char question[255];
     printf("distinctive question ");
-    gets(question);
+    scanf_s("%s",question);
+    //gets(question);
     TREE *tree = createTree(question);
     tree->yes = createTree(object);
     tree->no = createTree(data);

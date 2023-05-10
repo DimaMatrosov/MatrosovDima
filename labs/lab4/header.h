@@ -15,7 +15,7 @@ TREE *readTree(FILE *fp);
 
 void movingTree(TREE* tree);
 
-TREE *addTree(char *data);
+TREE *addTree(const char *data);
 
 void saveTree(TREE* tree, FILE *fp);
 void freeTree(TREE* node);
