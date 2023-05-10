@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "lab4n.exe"
+			"path" : "lab4.exe"
 		},
 		{
-			"path" : "lab4n.pdb"
+			"path" : "lab4.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -55,7 +55,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "C:/labsnew/labs/lab4n/."
+					"path" : "C:/labsnew/labs/lab4/."
 				}
 			],
 			"language" : "C",
@@ -74,7 +74,7 @@
 			]
 		}
 	],
-	"id" : "lab4n::@6890427a1f51a3e7e1df",
+	"id" : "lab4::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -94,8 +94,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "lab4n",
-	"nameOnDisk" : "lab4n.exe",
+	"name" : "lab4",
+	"nameOnDisk" : "lab4.exe",
 	"paths" : 
 	{
 		"build" : ".",

@@ -1,6 +1,6 @@
 #include "header.h"
 
-TREE *createTree(char *data) {
+TREE *createTree(const char *data) {
     TREE *tree = malloc(sizeof(TREE));
     tree->data = strdup(data);
     tree->yes = NULL;
@@ -32,11 +32,13 @@ void movingTree(TREE *tree) {
         }
         tree = tree->yes;
     }
-    if (s1 == 'n') {
+    else if (s1 == 'n') {
         if (tree->no == NULL) {
-            printf("end2\n");
             TREE *newTREE = addTree(tree->data);
             memcpy(tree, newTREE, sizeof(TREE));
+            if (newTREE != NULL) {
+                free(newTREE);
+            }
             return;
         }
         tree = tree->no;

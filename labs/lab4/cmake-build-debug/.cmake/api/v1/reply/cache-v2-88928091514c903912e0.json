@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/labsnew/labs/lab4n/cmake-build-debug"
+			"value" : "c:/labsnew/labs/lab4/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/labsnew/labs/lab4n"
+			"value" : "C:/labsnew/labs/lab4"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -707,7 +707,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "lab4n"
+			"value" : "lab4"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1086,6 +1086,42 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "lab4_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/labsnew/labs/lab4/cmake-build-debug"
+		},
+		{
+			"name" : "lab4_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "lab4_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/labsnew/labs/lab4"
+		},
+		{
 			"name" : "lab4n_BINARY_DIR",
 			"properties" : 
 			[
@@ -1095,7 +1131,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/labsnew/labs/lab4n/cmake-build-debug"
+			"value" : "C:/labsnew/labs/lab4/cmake-build-debug"
 		},
 		{
 			"name" : "lab4n_IS_TOP_LEVEL",
@@ -1119,7 +1155,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/labsnew/labs/lab4n"
+			"value" : "C:/labsnew/labs/lab4"
 		}
 	],
 	"kind" : "cache",

@@ -1,7 +1,7 @@
 #include "header.h"
 
 int main(){
-    printf("choose a Naruto character\n");
+    printf("Choose a Naruto character\n");
     FILE *fp = fopen("tree.txt", "r");
 
     TREE* tree = readTree(fp);
@@ -12,4 +12,5 @@ int main(){
     saveTree(tree, fp);
     fclose(fp);
     freeTree(tree);
+    return 0;
 }

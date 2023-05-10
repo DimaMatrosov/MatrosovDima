@@ -9,7 +9,7 @@ typedef struct TREE{
     struct TREE *no;
 } TREE;
 
-TREE *createTree(char *data);
+TREE *createTree(const char *data);
 
 TREE *readTree(FILE *fp);
 
