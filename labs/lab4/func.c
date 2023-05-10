@@ -2,7 +2,7 @@
 
 TREE *createTree(const char *data) {
     TREE *tree = malloc(sizeof(TREE));
-    tree->data = strdup(data);
+    tree->data = _strdup(data);
     tree->yes = NULL;
     tree->no = NULL;
     return tree;
@@ -53,7 +53,6 @@ TREE *addTree(const char *data) {
     char question[255];
     printf("distinctive question ");
     scanf_s("%s",question);
-    //gets(question);
     TREE *tree = createTree(question);
     tree->yes = createTree(object);
     tree->no = createTree(data);
