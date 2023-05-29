@@ -1,0 +1,3 @@
+C:/labsnew/labs/lab5m/cmake-build-debug/CMakeFiles/lab5m.dir
+C:/labsnew/labs/lab5m/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/labsnew/labs/lab5m/cmake-build-debug/CMakeFiles/rebuild_cache.dir
