@@ -6,7 +6,9 @@ string *split(char *input, char *delimiter) {
     string *str = malloc(sizeof(string));
     str->str = NULL;
     str->len = 0;
-
+    if(input_copy ==NULL){
+        exit(0);
+    }
     char *token = strtok(input_copy, delimiter);
 
     while (token != NULL) {

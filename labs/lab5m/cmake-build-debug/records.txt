@@ -10,3 +10,4 @@ chatgpt.com IN A 234.222.123.245
 reddit.com IN A 83.125.28.194
 twitter.com IN A 133.207.47.36
 yandex.ru IN A 28.239.213.21
+vk.com IN A 40.147.113.203
